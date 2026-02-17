@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .text-cyber-yellow {
+    color: #f6dd9a;
+  }
+  
+  .bg-cyber-yellow {
+    background-color: #f6dd9a;
+  }
+
+  .nav-hover:hover {
+    color: #f6dd9a;
+    text-shadow: 0 0 8px rgba(246, 221, 154, 0.6);
+  }
+}
+
+/* Glitch Animation - Keeping as CSS for complex filter/clip-path interactions if needed, 
+   though tailwind.config.js also has some definitions. */
+.glitch-active {
+    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    filter: hue-rotate(90deg) contrast(1.5);
+}
+
+/* Scrollbar hiding */
+::-webkit-scrollbar {
+    display: none;
+}
