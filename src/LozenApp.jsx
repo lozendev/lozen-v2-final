@@ -103,8 +103,8 @@ const BASE_URL = import.meta.env.BASE_URL;
 const SLIDES = [
     { id: 'home', video: `${BASE_URL}finaldesk.webm`, navLabel: 'home' },
     { id: 'about', video: `${BASE_URL}FinalStand.webm`, navLabel: 'about' },
-    // { id: 'success', video: `${BASE_URL}FinalBed.webm`, navLabel: 'success' },
-    { id: 'sale', video: `${BASE_URL}FinalStretch.webm`, navLabel: 'sale' }
+    { id: 'success', video: `${BASE_URL}FinalBed.webm`, navLabel: 'success' },
+    // { id: 'sale', video: `${BASE_URL}FinalStretch.webm`, navLabel: 'sale' }
 ];
 
 const SOCIALS = [
@@ -281,7 +281,7 @@ const LozenApp = () => {
                 {currentSlide === 0 && (
                     <div className="w-full h-full relative flex items-center">
                         <div className="flex flex-col items-start max-w-5xl z-30">
-                            <h2 className="text-xs md:text-sm font-bold uppercase mb-4 tracking-[0.2em] text-white/40 font-roboto">designer entering the world of memecoins</h2>
+                            <h2 className="text-xs md:text-sm font-bold uppercase mb-4 tracking-[0.2em] text-white/40 font-roboto">back to grinding</h2>
                             <h1 className="text-[80px] md:text-[140px] font-bold leading-none -ml-1 md:-ml-2 mb-8 tracking-tighter mix-blend-overlay">lozen.dev</h1>
 
                             <button
@@ -297,7 +297,7 @@ const LozenApp = () => {
                             <span className="text-xs font-bold uppercase tracking-wide text-zinc-300 font-urbanist">my socials</span>
                             <div className="flex flex-row gap-4">
                                 {SOCIALS.map((social, idx) => (
-                                    <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-3 border border-zinc-700 text-zinc-400 hover:border-[#fcf5e5] hover:text-[#fcf5e5] hover:bg-[#fcf5e5]/5 transition-all rounded-sm" onClick={(e) => e.stopPropagation()}>
+                                    <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-3 border border-zinc-500 text-zinc-300 hover:border-[#fcf5e5] hover:text-[#fcf5e5] hover:bg-[#fcf5e5]/5 transition-all rounded-sm" onClick={(e) => e.stopPropagation()}>
                                         <social.icon size={20} />
                                     </a>
                                 ))}
@@ -327,9 +327,9 @@ const LozenApp = () => {
                                 </div>
                             </div>
 
-                            <div className="max-w-md text-right text-xs font-bold leading-relaxed uppercase tracking-wide text-zinc-300 text-justify font-urbanist">
+                            <div className="max-w-md text-right text-xs font-bold leading-relaxed uppercase tracking-wide text-zinc-300 font-urbanist">
                                 <p>
-                                    a designer from <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">'back in the day'</span>, re-entering the world of meme coins with an aim to release more thought out projects than slop. Open to work with other devs to bring their vision to life.
+                                    a designer from <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">'back in the day'</span>. Giving deving and trenching a go. Open to work with other devs to bring their vision to life.
                                 </p>
                             </div>
                         </div>
@@ -343,11 +343,13 @@ const LozenApp = () => {
                         <h1 className="text-[100px] md:text-[150px] font-bold leading-none mb-10 tracking-tighter">deets</h1>
 
                         {/* New Backdrop Blur Container */}
-                        <div className="max-w-2xl bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/5 shadow-2xl">
-                            <p className="text-sm md:text-base font-bold uppercase leading-loose text-zinc-300 tracking-wide font-urbanist">
-                                My meme coin journey started with <span className="text-[#fcf5e5]">BNB</span> where I helped multiple projects breach the 10 mil mc, some even to 30 mil mc through the use of my design skills. The art I produced has been seen in Times Square, magazines, billboards, promotional websites... you name it. I’m currently deepening my understanding of today’s meme market, with a goal of one day launching a successful meme coin to make myself and my followers rich.
-                                <br /><br />
-                                I have 3 wallets, Dev wallet for more thought out projects. A trash wallet for launch in the moment meme coins and a trenching wallet to... trench.
+                        <div className="max-w-4xl bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/5 shadow-2xl">
+                            <p className="text-xs md:text-sm font-bold uppercase leading-loose text-zinc-300 tracking-wide font-urbanist text-justify">
+                                I'm a designer who got into meme coins during the <span className="text-[#fcf5e5]">BNB</span> hype back in the day. I worked with some crazy devs, helping them reach the multimillion market cap milestone on their projects. My designs hit the Times Square, yahoo.com, billboards, promotional websites... you name it. Right now, I’m deepening my understanding of today’s meme market, with a goal of consistently launching successful meme coins of my own.
+                            </p>
+                            <br />
+                            <p className="text-xs md:text-sm font-bold uppercase leading-loose text-zinc-300 tracking-wide font-urbanist text-center">
+                                I have 3 wallets; Dev wallet for more thought out projects, a trash wallet for 'launch in the moment' type of projects and a trading wallet.
                             </p>
                         </div>
 
@@ -375,7 +377,7 @@ const LozenApp = () => {
                 )}
 
                 {/* Slide 2: Successful Projects */}
-                {false && (
+                {currentSlide === 2 && (
                     <div className="w-full h-full relative flex items-center z-30 pl-0 md:pl-10">
                         <div className="absolute top-48 left-0 w-full">
                             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 mb-16">successful projects</h2>
@@ -408,7 +410,7 @@ const LozenApp = () => {
                 )}
 
                 {/* Slide 3: Sale */}
-                {currentSlide === 2 && (
+                {false && (
                     <div className="w-full h-full relative flex flex-col md:flex-row items-center justify-between gap-12 z-30 py-24">
                         <div className="flex-1 w-full flex flex-col items-start pr-0 md:pr-12 h-full justify-center relative">
                             <h3 className="text-xs font-bold uppercase text-zinc-500 mb-4 tracking-[0.2em]">project #1 for sale</h3>
