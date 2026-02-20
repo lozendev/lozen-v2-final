@@ -103,7 +103,7 @@ const BASE_URL = import.meta.env.BASE_URL;
 const SLIDES = [
     { id: 'home', video: `${BASE_URL}finaldesk.webm`, navLabel: 'home' },
     { id: 'about', video: `${BASE_URL}FinalStand.webm`, navLabel: 'about' },
-    { id: 'success', video: `${BASE_URL}FinalBed.webm`, navLabel: 'success' },
+    // { id: 'success', video: `${BASE_URL}FinalBed.webm`, navLabel: 'success' },
     { id: 'sale', video: `${BASE_URL}FinalStretch.webm`, navLabel: 'sale' }
 ];
 
@@ -281,14 +281,14 @@ const LozenApp = () => {
                 {currentSlide === 0 && (
                     <div className="w-full h-full relative flex items-center">
                         <div className="flex flex-col items-start max-w-5xl z-30">
-                            <h2 className="text-xs md:text-sm font-bold uppercase mb-4 tracking-[0.2em] text-white/40 font-roboto">designer, dev, mediocre trencher</h2>
+                            <h2 className="text-xs md:text-sm font-bold uppercase mb-4 tracking-[0.2em] text-white/40 font-roboto">designer entering the world of memecoins</h2>
                             <h1 className="text-[80px] md:text-[140px] font-bold leading-none -ml-1 md:-ml-2 mb-8 tracking-tighter mix-blend-overlay">lozen.dev</h1>
 
                             <button
                                 onClick={(e) => { e.stopPropagation(); setShowLatestModal(true); }}
                                 className="group relative overflow-hidden flex items-center gap-3 text-[#fcf5e5] font-bold uppercase tracking-wider text-sm pl-4 pr-6 py-3 border-l-2 border-[#fcf5e5] hover:bg-[#fcf5e5]/10 transition-all font-roboto"
                             >
-                                latest success
+                                latest migration
                                 <ArrowRight size={16} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
                             </button>
                         </div>
@@ -309,21 +309,27 @@ const LozenApp = () => {
                                 <div className="flex items-center gap-2">
                                     <span>{'{ '}</span>
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); copyToClipboard('6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn'); }}
+                                        onClick={(e) => { e.stopPropagation(); copyToClipboard('GF898iSAQk3YpiwHVLJEqhWGnJ5A19kGFePTacx4PV6X'); }}
                                         className="cursor-pointer flex items-center gap-2 hover:text-white transition-colors group"
                                     >
-                                        <span>{shortenAddress('6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn')}</span>
+                                        <span>{shortenAddress('GF898iSAQk3YpiwHVLJEqhWGnJ5A19kGFePTacx4PV6X')}</span>
                                         <Copy size={12} className="opacity-100 transition-opacity" />
                                     </button>
                                     <span>, </span>
-                                    <a href="https://www.axiom.trade" target="_blank" className="hover:text-white transition-all" onClick={(e) => e.stopPropagation()}>!axiom</a>
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); copyToClipboard('ECb2F4R1MEwEcAFxPKMvZT86ZxJG2nqSebTWqTgC9W7E'); }}
+                                        className="cursor-pointer flex items-center gap-2 hover:text-white transition-colors group"
+                                    >
+                                        <span>{shortenAddress('ECb2F4R1MEwEcAFxPKMvZT86ZxJG2nqSebTWqTgC9W7E')}</span>
+                                        <Copy size={12} className="opacity-100 transition-opacity" />
+                                    </button>
                                     <span>{' }'}</span>
                                 </div>
                             </div>
 
                             <div className="max-w-md text-right text-xs font-bold leading-relaxed uppercase tracking-wide text-zinc-300 text-justify font-urbanist">
                                 <p>
-                                    a <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">designer</span> and <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">dev</span> launching, selling and designing random meme coin projects. Occasionally trenching. Aiming to release more thought out projects than slop. If you’re interested in working with me message me via <a href="https://t.me/lozendev" target="_blank" className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent border-b border-blue-500/30 hover:border-blue-400 transition-colors" onClick={(e) => e.stopPropagation()}>telegram</a>
+                                    a designer from <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">'back in the day'</span>, re-entering the world of meme coins with an aim to release more thought out projects than slop. Open to work with other devs to bring their vision to life.
                                 </p>
                             </div>
                         </div>
@@ -339,23 +345,37 @@ const LozenApp = () => {
                         {/* New Backdrop Blur Container */}
                         <div className="max-w-2xl bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/5 shadow-2xl">
                             <p className="text-sm md:text-base font-bold uppercase leading-loose text-zinc-300 tracking-wide font-urbanist">
-                                a designer, dev and somewhat mediocre trencher. Launching both planned and trash meme coins with the goal of making myself and everyone that follows rich. If you're a dev and want to work together, get in touch.
+                                My meme coin journey started with <span className="text-[#fcf5e5]">BNB</span> where I helped multiple projects breach the 10 mil mc, some even to 30 mil mc through the use of my design skills. The art I produced has been seen in Times Square, magazines, billboards, promotional websites... you name it. I’m currently deepening my understanding of today’s meme market, with a goal of one day launching a successful meme coin to make myself and my followers rich.
                                 <br /><br />
-                                My meme coin journey started with <span className="text-[#fcf5e5]">BNB</span> where I helped multiple projects breach the 10 mil mc, some even to 30 mil mc. I’m currently deepening my understanding of today’s meme market dynamics, with a focused goal of launching consistently successful meme coins.
+                                I have 3 wallets, Dev wallet for more thought out projects. A trash wallet for launch in the moment meme coins and a trenching wallet to... trench.
                             </p>
                         </div>
 
-                        <button
-                            onClick={(e) => { e.stopPropagation(); copyToClipboard('6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn'); }}
-                            className="mt-12 group font-mono text-xs text-[#fcf5e5] border border-[#fcf5e5]/30 px-8 py-4 bg-black/60 backdrop-blur-sm rounded-full hover:border-[#fcf5e5] hover:text-[#fcf5e5] transition-all duration-300"
-                        >
-                            Dev wallet: 6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn
-                        </button>
+                        <div className="flex flex-col gap-4 mt-12 items-center w-full">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); copyToClipboard('6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn'); }}
+                                className="group font-mono text-xs text-[#fcf5e5] border border-[#fcf5e5]/30 px-8 py-4 bg-black/60 backdrop-blur-sm rounded-full hover:border-[#fcf5e5] hover:text-[#fcf5e5] transition-all duration-300 w-[90%] md:w-[600px] whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                Trash wallet: 6QUbbx1yk9btVR64hVbQGDAU4o5Tn8V8L8jZuxCHqdjn
+                            </button>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); copyToClipboard('GF898iSAQk3YpiwHVLJEqhWGnJ5A19kGFePTacx4PV6X'); }}
+                                className="group font-mono text-xs text-[#fcf5e5] border border-[#fcf5e5]/30 px-8 py-4 bg-black/60 backdrop-blur-sm rounded-full hover:border-[#fcf5e5] hover:text-[#fcf5e5] transition-all duration-300 w-[90%] md:w-[600px] whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                Dev wallet: GF898iSAQk3YpiwHVLJEqhWGnJ5A19kGFePTacx4PV6X
+                            </button>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); copyToClipboard('ECb2F4R1MEwEcAFxPKMvZT86ZxJG2nqSebTWqTgC9W7E'); }}
+                                className="group font-mono text-xs text-[#fcf5e5] border border-[#fcf5e5]/30 px-8 py-4 bg-black/60 backdrop-blur-sm rounded-full hover:border-[#fcf5e5] hover:text-[#fcf5e5] transition-all duration-300 w-[90%] md:w-[600px] whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                Trade wallet: ECb2F4R1MEwEcAFxPKMvZT86ZxJG2nqSebTWqTgC9W7E
+                            </button>
+                        </div>
                     </div>
                 )}
 
                 {/* Slide 2: Successful Projects */}
-                {currentSlide === 2 && (
+                {false && (
                     <div className="w-full h-full relative flex items-center z-30 pl-0 md:pl-10">
                         <div className="absolute top-48 left-0 w-full">
                             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 mb-16">successful projects</h2>
@@ -388,7 +408,7 @@ const LozenApp = () => {
                 )}
 
                 {/* Slide 3: Sale */}
-                {currentSlide === 3 && (
+                {currentSlide === 2 && (
                     <div className="w-full h-full relative flex flex-col md:flex-row items-center justify-between gap-12 z-30 py-24">
                         <div className="flex-1 w-full flex flex-col items-start pr-0 md:pr-12 h-full justify-center relative">
                             <h3 className="text-xs font-bold uppercase text-zinc-500 mb-4 tracking-[0.2em]">project #1 for sale</h3>
